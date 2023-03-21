@@ -1,0 +1,41 @@
+<!--index page-->
+{% extends 'base.html' %}
+{% block body %}
+<!--index main content-->
+<div class="content" id="contentIndex">
+  <div class="textBox">
+    <h2>It's not just a place <br>It's <span>RemoteCoders</span></h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Temporibus optio voluptate repudiandae tenetur eos
+      magnam reiciendis molestiae. Saepe, esse animi.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Mollitia, omnis.</p>
+    <div class="loginDiv">
+      <button id="showUser" onclick="userDiv()">As User</button>
+      <button id="showAdmin" onclick="adminDiv()">As Admin</button>
+    </div>
+  </div>
+  <div class="imgBox">
+    <img src="./static/img/indexx.jpg" class="indexImg">
+  </div>
+</div>
+<!--user name popup div-->
+<div class="userNameInput popupDetailsHide popupDetail " id="userNameInput">
+  <button class="closeBtn" onclick="cancelLogin()">&times;</button>
+  <form class="indexForm" action="/show" method="get">
+    <div><input type="text" placeholder="Enter your user name" name="user_name" id="user_id"></div>
+    <h4 id="errorAdmin"></h4>
+    <div> <a href="./show.html"><button type="submit" id="submitUserName" onclick="userLogin()">Login</button></a></div>
+  </form>
+</div>
+<!--admin popup div  The password is(123456)-->
+<div class="adminNameInput popupDetailsHide popupDetail " id="adminNameInput">
+  <button class="closeBtn" onclick="cancelLogin()">&times;</button>
+  <form class="indexForm" action="/admin" method="get">
+    <div><input type="password" placeholder="Enter your password" name="admin_password" id="admin_id"></div>
+    <h4 id="errorAdmin"></h4>
+    <div><a href="./admin.html"><button type="submit" id="submitAdminName" onclick="adminLogin()">Login</button></a>
+    </div>
+  </form>
+</div>
+{% endblock %}

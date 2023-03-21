@@ -1,0 +1,121 @@
+body{
+    background-color: #4f5055;
+    padding: 25px;
+    text-align: center;
+}
+.homepageHref{
+    color: #ebc36c;
+    text-decoration: none; 
+    font-weight: bold;
+}
+.homepageHref:hover{
+    color: #d3cfce;
+}
+.content{
+position: relative;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.textBox{
+    position: relative;
+    max-width: 600px;
+}
+ h2{
+    color:#d3cfce;
+    font-size: 4em;
+    line-height: 1.4em;
+}
+ p{
+    color:#d3cfce
+}
+span{
+    color: #ebc36c;
+}
+.loginDiv{
+ padding: 3%;
+ margin: 2%;
+}
+#user_id , #admin_id{
+    padding: 5px;
+    border: 2px;
+    border-radius:20px ;
+    box-shadow: 31px 14px 116px -65px rgba(205,193,209,1);
+    background-color:#4f5055;
+    color:#d3cfce;
+}
+#submitUserName ,#submitAdminName ,.indexContent button , button{
+        text-align: center;
+        font-size: 14px;
+        background-color:#ebc36c;
+        color: #27241f;
+        width: 100px;
+        padding: 5px;
+        border: 2px;
+        outline: none;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius:20px ;
+        box-shadow: 0 10px 26px black,0 5px 1px rgba(0, 0, 0,0.27);
+        transition: .4s;
+}
+#submitUserName:hover , .indexContent button:hover   ,#submitAdminName:hover , button:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0,0.16),0 10px 10px rgba(0, 0, 0,0.23);
+    transform: translate(0px ,-8px);
+}
+
+.indexContent{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./img/indexx.jpg);
+    background-size: cover;
+}
+.indexContent{
+    margin: auto;
+    width: 50%;
+    margin-left: 26%;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 10%;
+    padding: 20px;
+    box-shadow: 31px 14px 116px -65px rgba(205,193,209,1);
+    transition: .4s;
+    background:#4f5055;
+}
+.optionsUser h2{
+    color:#d3cfce;
+    font-size: 2em;
+    line-height: 1.4em;
+}
+form{
+    margin:10px
+}
+.popupDetail{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;
+    padding: 20px;
+    background:  #3b3b3e;
+    color: #d3cfce;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px#d3cfce,0 10px 10px rgba(0, 0, 0,0.23);
+    margin-top: -25px; 
+}
+.popupDetail h2{
+    text-align: center;
+}
+.closeBtn{
+    float: right;
+}
+.popupDetailsHide{
+    display: none;
+ }
+ .blur{
+    filter:blur(10px);
+    -webkit-filter: blur(10px);
+ }
+ .resultDiv{
+    margin-top: 30px;
+ }

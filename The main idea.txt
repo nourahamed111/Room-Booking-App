@@ -1,0 +1,30 @@
+                               
+                           Booking Room App
+
+
+                            This is a Flask web application that manages available time slots for different rooms. 
+                            The Room class is defined with a constructor that initializes the object's attributes,
+                            and two methods one of this is static method
+
+                            There are three functions defined to manage the application's functionalities.
+
+                              1-The load_time_from_json method sets the available attribute of a Room object from the rooms.json file.
+                              2-The remove_time_from_json function removes a selected time slot from the selected room in the rooms.json file.
+                              3-The get_next_id function returns the next available id for a new room.
+
+                            There are three routes defined in the application:
+
+                                /: Renders the index page.
+                               /admin: Renders the admin page where the admin can add new rooms and manage their time slots.
+                              /show: Renders the page that shows the available time slots for each room to the user.
+                             /result:Renders the page that shows the success message after booking a room.
+
+                           There are two functions defined to handle the form submissions on the admin page:
+
+                              add_room: Adds a new room to the rooms.json file.
+                              Reset: Updates the available time slots for a selected room in the rooms.json file.
+  
+
+
+
+

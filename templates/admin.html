@@ -1,0 +1,36 @@
+<!--admin page it open through login as admin with password 123456-->
+{% extends 'base.html' %}
+{% block body %}
+<a href="/" class="homepageHref"> Back to HomePage</a>
+<!--this div contain the add room part -->
+<div class="adminDiv  " id="adminDivv">
+    <button id="addRoomBtn" class="addRoomBtn" onclick="showAddForm()">Add Room</button>
+    <div class="addDiv popupDetailsHide " id="addDiv">
+        <form class="addForm" id="addForm" method="POST" action="/add">
+            <label for="roomTitle">Room Name: </label>
+            <input type="text" id="roomTitle" name="roomTitle" /> <br />
+            <label for="roomDesc">Room Description: </label>
+            <input type="text" id="roomDesc" name="roomDesc" /> <br />
+            <label for="roomImg">Room Image:</label>
+            <input type="file" id="roomImg" name="roomImg" /> <br />
+            <button class="submitAddBtn" type="submit">ADD</button>
+        </form>
+    </div>
+</div>
+<!--the rooms which is added till now and have button to update time availability to each room-->
+<div class="main" id="main">
+    {% for room in details %}
+    <div class="item">
+        <div class="rooms">
+            <img src="{{ room.image }}">
+            <h6>{{ room.title }}</h6>
+            <form method="POST" action="/update">
+                <input type="text" id="room_id" name="room_id" value={{room.id}} />
+                <button type="submit">Reset Time</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
